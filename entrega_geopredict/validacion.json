@@ -1,0 +1,188 @@
+{
+  "valido": true,
+  "controles": [
+    {
+      "control": "esquema y tamaño",
+      "estado": "pass",
+      "resultado": [
+        7043,
+        25,
+        6691
+      ],
+      "criterio": "Columnas declaradas y ceil(longitud/paso) trazas únicas."
+    },
+    {
+      "control": "tipos CSV y finitud",
+      "estado": "pass",
+      "resultado": {
+        "survey_id": "str",
+        "trace_id": "int64",
+        "channel_id": "int64",
+        "distance_m": "float64",
+        "longitude": "float64",
+        "latitude": "float64",
+        "timestamp": "str",
+        "elapsed_s": "float64",
+        "speed_kmh": "float64",
+        "center_frequency_mhz": "int64",
+        "samples_per_trace": "int64",
+        "sampling_interval_ns": "float64",
+        "time_window_ns": "int64",
+        "trace_spacing_m": "float64",
+        "antenna_height_m": "float64",
+        "tx_rx_offset_m": "int64",
+        "rms_surface_au": "float64",
+        "rms_shallow_au": "float64",
+        "rms_middle_au": "float64",
+        "rms_late_au": "float64",
+        "peak_abs_au": "float64",
+        "peak_twt_ns": "float64",
+        "energy_au2_ns": "float64",
+        "dominant_frequency_mhz": "float64",
+        "bandwidth_90_mhz": "float64"
+      },
+      "criterio": "Tipos inferidos compatibles con el diccionario."
+    },
+    {
+      "control": "faltantes",
+      "estado": "pass",
+      "resultado": {
+        "celdas": 3169,
+        "de_celdas_elegibles": 63387,
+        "fraccion_elegibles": 0.04999447836307129,
+        "fraccion_todo_csv": 0.017998012210705665,
+        "filas_afectadas": 2197
+      },
+      "criterio": "Cuota redondeada en celdas elegibles, campos fijos completos y máscara coincidente."
+    },
+    {
+      "control": "duplicados exactos",
+      "estado": "pass",
+      "resultado": {
+        "copias_adicionales": 352,
+        "fraccion_filas": 0.0499787022575607
+      },
+      "criterio": "Copias idénticas en todas las columnas, con idénticos nulos."
+    },
+    {
+      "control": "atípicos de adquisición",
+      "estado": "pass",
+      "resultado": {
+        "trazas_unicas": 335,
+        "fraccion_unicas": 0.050067254520998354,
+        "fraccion_filas_csv": 0.05012068720715604
+      },
+      "criterio": "Cuota redondeada de acoplamientos atípicos inyectados. La máscara se guarda fuera del CSV."
+    },
+    {
+      "control": "trazado y PK",
+      "estado": "pass",
+      "resultado": {
+        "longitud_m": 334.5178137802902,
+        "error_maximo_m": 5.550119023827317e-06,
+        "longitud_min_max": [
+          -75.5747200756,
+          -75.5732248643
+        ],
+        "latitud_min_max": [
+          6.25756542187,
+          6.26018900887
+        ]
+      },
+      "criterio": "Eje WGS84 archivado y tolerancia 2 mm para serialización numérica, no exactitud absoluta OSM."
+    },
+    {
+      "control": "reloj de adquisición",
+      "estado": "pass",
+      "resultado": {
+        "duracion_s": 32.917547,
+        "error_maximo_paso_s": 9.819286474191044e-07
+      },
+      "criterio": "Tiempo ascendente por traza, ISO 8601 UTC−05:00 y concordancia con distancia y velocidad."
+    },
+    {
+      "control": "matrices y eje temporal",
+      "estado": "pass",
+      "resultado": {
+        "shape": [
+          6691,
+          512
+        ],
+        "dt_ns": 0.125,
+        "nyquist_mhz": 4000.0
+      },
+      "criterio": "A(x,t) finita, muestreo uniforme y margen espectral para el pulso y la FFT."
+    },
+    {
+      "control": "atributos derivados",
+      "estado": "pass",
+      "resultado": 4.998779168374767e-13,
+      "criterio": "Recalculados de la señal observada. Diferencia absoluta máxima < 1e−7 tras exportación."
+    },
+    {
+      "control": "propiedades y llegadas físicas",
+      "estado": "pass",
+      "resultado": {
+        "pearson_permitividad_conductividad_suelo": 0.9973282493660746,
+        "objetos_con_techo_fuera_de_ventana": [
+          "T03"
+        ]
+      },
+      "criterio": "Capas positivas, humedad acoplada, tiempo creciente con profundidad y objetos físicamente plausibles."
+    },
+    {
+      "control": "ruido electrónico",
+      "estado": "pass",
+      "resultado": {
+        "rms_au": 0.001998869702219963,
+        "correlacion_vecinal": 0.6495798065865706,
+        "snr_db_p05_mediana_p95": [
+          10.467811107635498,
+          12.975029945373535,
+          22.14349365234375
+        ]
+      },
+      "criterio": "RMS dentro de 2,5 % del configurado y autocorrelación a ±0,025. SNR descriptiva en [3,30) ns."
+    },
+    {
+      "control": "cobertura experimental",
+      "estado": "descriptive",
+      "resultado": {
+        "objetos_por_tipo": {
+          "cavidad": 4,
+          "tuberia": 3
+        },
+        "trazas_con_cavidad_en_vertical": 181,
+        "trazas_sin_cavidad_en_vertical": 6510,
+        "trazas_sobre_tablero": 569
+      },
+      "criterio": "Cobertura geométrica del simulador. No es etiqueta de detección ni prevalencia."
+    },
+    {
+      "control": "extremos estadísticos superficiales",
+      "estado": "descriptive",
+      "resultado": {
+        "umbral_ua": 0.16015599295362498,
+        "trazas_con_RMS_superior": 364,
+        "mediana_rms_atipicos_ua": 0.2388659566640854,
+        "mediana_rms_no_atipicos_ua": 0.14512930810451508
+      },
+      "criterio": "Regla de Tukey solo descriptiva. Los atípicos pedidos se definen por inyección."
+    },
+    {
+      "control": "coherencia vecinal subsuperficial",
+      "estado": "descriptive",
+      "resultado": {
+        "correlacion_rms_somero_lag_1": 0.9986138165094811,
+        "correlacion_rms_medio_lag_1": 0.9930311448297328
+      },
+      "criterio": "Pearson entre atributos de trazas contiguas, antes de la exportación con nulos."
+    },
+    {
+      "control": "comparación con campo y FDTD",
+      "estado": "not_evaluable",
+      "resultado": null,
+      "criterio": "Requiere capturas, metadatos GPR comparables y ejecuciones FDTD de referencia."
+    }
+  ]
+}

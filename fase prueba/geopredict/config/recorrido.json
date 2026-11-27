@@ -1,0 +1,42 @@
+{
+  "adquisicion": {
+    "survey_id": "MED-REGIONAL-SIM-001",
+    "inicio_iso": "2026-11-26T09:00:00-05:00",
+    "canal": 1,
+    "frecuencia_mhz": 400,
+    "muestras": 512,
+    "ventana_ns": 64,
+    "paso_m": 0.05,
+    "altura_m": 0.08,
+    "offset_tx_rx_m": 0,
+    "ruido_rms": 0.002,
+    "correlacion_ruido_vecinal": 0.65,
+    "fraccion_nulos": 0.05,
+    "fraccion_duplicados": 0.05,
+    "fraccion_atipicos": 0.05
+  },
+  "materiales": {
+    "asfalto": {"espesor_m": [0.105, 0.18], "epsilon_dry": 4.4, "epsilon_wet": 5.8, "sigma_dry_s_m": 0.0015, "sigma_wet_s_m": 0.005},
+    "base": {"espesor_m": [0.15, 0.24], "epsilon_dry": 4.8, "epsilon_wet": 9.7, "sigma_dry_s_m": 0.003, "sigma_wet_s_m": 0.016},
+    "subbase": {"espesor_m": [0.16, 0.25], "epsilon_dry": 5.7, "epsilon_wet": 12.0, "sigma_dry_s_m": 0.004, "sigma_wet_s_m": 0.024},
+    "suelo": {"epsilon_dry": 6.5, "epsilon_wet": 22.0, "sigma_dry_s_m": 0.006, "sigma_wet_s_m": 0.07},
+    "tablero": {"espesor_m": [0.25, 0.34], "epsilon_dry": 6.2, "epsilon_wet": 10.5, "sigma_dry_s_m": 0.008, "sigma_wet_s_m": 0.03},
+    "aire": {"epsilon": 1.0, "sigma_s_m": 0},
+    "agua": {"epsilon": 75.0, "sigma_s_m": 0.12},
+    "concreto_tuberia": {"epsilon": 7.8, "sigma_s_m": 0.012}
+  },
+  "zonas": [
+    {"id": "H01", "tipo": "humedad", "fraccion_eje": 0.27, "ancho_m": 21, "contraste": 0.32},
+    {"id": "Z01", "tipo": "reparacion", "fraccion_eje": 0.58, "ancho_m": 7, "contraste": 0.26},
+    {"id": "H02", "tipo": "humedad", "fraccion_eje": 0.72, "ancho_m": 13, "contraste": 0.29}
+  ],
+  "objetos": [
+    {"id": "T01", "tipo": "tuberia", "fraccion_eje": 0.16, "techo_m": 0.83, "diametro_m": 0.28, "material": "concreto_tuberia", "pared_m": 0.065, "contenido": "aire"},
+    {"id": "C01", "tipo": "cavidad", "fraccion_eje": 0.34, "techo_m": 0.78, "ancho_m": 1.35, "altura_m": 0.16, "contenido": "aire"},
+    {"id": "C02", "tipo": "cavidad", "fraccion_eje": 0.48, "techo_m": 1.02, "ancho_m": 2.6, "altura_m": 0.34, "contenido": "aire"},
+    {"id": "T02", "tipo": "tuberia", "fraccion_eje": 0.59, "techo_m": 1.12, "diametro_m": 0.44, "material": "concreto_tuberia", "pared_m": 0.09, "contenido": "agua"},
+    {"id": "C03", "tipo": "cavidad", "fraccion_eje": 0.70, "techo_m": 1.44, "ancho_m": 2.2, "altura_m": 0.28, "contenido": "agua"},
+    {"id": "C04", "tipo": "cavidad", "fraccion_eje": 0.91, "techo_m": 2.1, "ancho_m": 2.9, "altura_m": 0.18, "contenido": "aire", "fraccion_agua": 0.48},
+    {"id": "T03", "tipo": "tuberia", "fraccion_eje": 0.94, "techo_m": 6.5, "diametro_m": 1.4, "material": "concreto_tuberia", "pared_m": 0.14, "contenido": "agua"}
+  ]
+}

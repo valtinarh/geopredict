@@ -28,10 +28,10 @@ CORRELACION_VECINAL = 0.75
 ESCENAS = ("estable", "tuberia", "cavidad", "combinada")
 
 
-def _eco(tiempo_ns, llegada_ns, amplitud):
+def _eco(tiempo_ns, llegada_ns, amplitud, frecuencia_mhz=FREQ_MHZ):
     """Desplaza y escala un pulso de Ricker para cada posición."""
     retardo = tiempo_ns - np.asarray(llegada_ns)[..., None]
-    fase_cuadrada = (np.pi * (FREQ_MHZ / 1000) * retardo) ** 2
+    fase_cuadrada = (np.pi * (frecuencia_mhz / 1000) * retardo) ** 2
     return np.asarray(amplitud)[..., None] * (
         (1 - 2 * fase_cuadrada) * np.exp(-fase_cuadrada)
     )

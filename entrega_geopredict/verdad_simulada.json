@@ -1,0 +1,140 @@
+{
+  "zonas": [
+    {
+      "id": "H01",
+      "tipo": "humedad",
+      "fraccion_eje": 0.27,
+      "ancho_m": 21,
+      "contraste": 0.32,
+      "centro_m": 90.31980972067836
+    },
+    {
+      "id": "Z01",
+      "tipo": "reparacion",
+      "fraccion_eje": 0.58,
+      "ancho_m": 7,
+      "contraste": 0.26,
+      "centro_m": 194.02033199256832
+    },
+    {
+      "id": "H02",
+      "tipo": "humedad",
+      "fraccion_eje": 0.72,
+      "ancho_m": 13,
+      "contraste": 0.29,
+      "centro_m": 240.85282592180894
+    }
+  ],
+  "objetos": [
+    {
+      "id": "T01",
+      "tipo": "tuberia",
+      "fraccion_eje": 0.16,
+      "techo_m": 0.83,
+      "diametro_m": 0.28,
+      "material": "concreto_tuberia",
+      "pared_m": 0.065,
+      "contenido": "aire",
+      "centro_m": 53.522850204846435,
+      "traza_cercana_indice": 1070,
+      "llegada_techo_ns": 15.53367640874637,
+      "amplitud_teorica_techo_ua": 0.01338602223274105,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "C01",
+      "tipo": "cavidad",
+      "fraccion_eje": 0.34,
+      "techo_m": 0.78,
+      "ancho_m": 1.35,
+      "altura_m": 0.16,
+      "contenido": "aire",
+      "centro_m": 113.73605668529868,
+      "traza_cercana_indice": 2275,
+      "llegada_techo_ns": 15.437814056819468,
+      "amplitud_teorica_techo_ua": 0.08180020809171415,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "C02",
+      "tipo": "cavidad",
+      "fraccion_eje": 0.48,
+      "techo_m": 1.02,
+      "ancho_m": 2.6,
+      "altura_m": 0.34,
+      "contenido": "aire",
+      "centro_m": 160.5685506145393,
+      "traza_cercana_indice": 3211,
+      "llegada_techo_ns": 20.142094954947012,
+      "amplitud_teorica_techo_ua": 0.05029836068211392,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "T02",
+      "tipo": "tuberia",
+      "fraccion_eje": 0.59,
+      "techo_m": 1.12,
+      "diametro_m": 0.44,
+      "material": "concreto_tuberia",
+      "pared_m": 0.09,
+      "contenido": "agua",
+      "centro_m": 197.36551013037123,
+      "traza_cercana_indice": 3947,
+      "llegada_techo_ns": 21.932470661312667,
+      "amplitud_teorica_techo_ua": 0.006069637565485189,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "C03",
+      "tipo": "cavidad",
+      "fraccion_eje": 0.7,
+      "techo_m": 1.44,
+      "ancho_m": 2.2,
+      "altura_m": 0.28,
+      "contenido": "agua",
+      "centro_m": 234.16246964620314,
+      "traza_cercana_indice": 4683,
+      "llegada_techo_ns": 32.426086194762455,
+      "amplitud_teorica_techo_ua": -0.004403594807701043,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "C04",
+      "tipo": "cavidad",
+      "fraccion_eje": 0.91,
+      "techo_m": 2.1,
+      "ancho_m": 2.9,
+      "altura_m": 0.18,
+      "contenido": "aire",
+      "fraccion_agua": 0.48,
+      "centro_m": 304.41121054006413,
+      "traza_cercana_indice": 6088,
+      "llegada_techo_ns": 44.85835633676383,
+      "amplitud_teorica_techo_ua": 0.002796151876680444,
+      "techo_en_ventana": true,
+      "estado": "assumed"
+    },
+    {
+      "id": "T03",
+      "tipo": "tuberia",
+      "fraccion_eje": 0.94,
+      "techo_m": 6.5,
+      "diametro_m": 1.4,
+      "material": "concreto_tuberia",
+      "pared_m": 0.14,
+      "contenido": "agua",
+      "centro_m": 314.4467449534728,
+      "traza_cercana_indice": 6289,
+      "llegada_techo_ns": 145.87224935442293,
+      "amplitud_teorica_techo_ua": 8.224629531878643e-09,
+      "techo_en_ventana": false,
+      "estado": "assumed"
+    }
+  ],
+  "referencia": "PK desde el extremo sur"
+}

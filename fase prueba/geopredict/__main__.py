@@ -56,6 +56,13 @@ def main() -> None:
     generar.add_argument("--salida", type=Path, default=Path("gpr_sintetico"))
     generar.add_argument("--semilla", type=int, default=42)
 
+    recorrido = comandos.add_parser("recorrido", help="Genera el dataset vial georreferenciado.")
+    recorrido.add_argument("--salida", type=Path, default=Path("entrega_geopredict"))
+    recorrido.add_argument("--semilla", type=int, default=42)
+    recorrido.add_argument("--config", type=Path)
+    recorrido.add_argument("--ruta", type=Path)
+    recorrido.add_argument("--sin-grafico", action="store_true")
+
     graficar = comandos.add_parser("graficar", help="Exporta un radargrama como PNG.")
     graficar.add_argument("escena", choices=ESCENAS)
     graficar.add_argument("--datos", type=Path, default=Path("gpr_sintetico"))
@@ -63,6 +70,14 @@ def main() -> None:
     graficar.add_argument("--limpia", action="store_true")
 
     args = parser.parse_args()
+    if args.comando == "recorrido":
+        from .recorrido import generar_recorrido
+
+        if args.semilla < 0:
+            recorrido.error("--semilla debe ser un entero no negativo")
+        generar_recorrido(args.salida, args.semilla, args.config, args.ruta, not args.sin_grafico)
+        print(f"Dataset validado en {args.salida.resolve()}")
+        return
     if args.comando == "generar":
         if args.semilla < 0:
             generar.error("--semilla debe ser un entero no negativo")

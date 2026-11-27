@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "backend": "analítico 2D por trazas",
+  "seed": 42,
+  "origen": "simulado sobre eje vial OSM",
+  "crs": "EPSG:4326",
+  "amplitud": "u.a.",
+  "orden_matriz": [
+    "trace_id",
+    "sample_index"
+  ],
+  "longitud_m": 334.5178137802902,
+  "sha256_config": "d3d451e6d3fac953e6474b59469557fbdc113d8d8e6e246e4864dd20db690c17",
+  "sha256_ruta": "b7ada4a54b829d583aa109fcfedba35d125b34b0addbc030dcc98d1239eeaeb6",
+  "bibliotecas": {
+    "numpy": "2.4.6",
+    "pandas": "3.1.0"
+  },
+  "archivos_auditoria": [
+    "calidad.npz",
+    "perfiles_simulados.npz",
+    "verdad_simulada.json"
+  ]
+}

@@ -1,10 +1,22 @@
 # GEOPREDICT
 
-Generador de datos sintéticos de georradar (GPR) para una línea virtual de 20 m y un canal. Simula las reflexiones de capas de pavimento, una tubería y el techo de una cavidad. Cada escena produce 400 trazas de 512 muestras de amplitud con signo.
+Generador reproducible de georradar (GPR) con una pasada georreferenciada por la Avenida Regional en Medellín y las cuatro escenas de control de 20 m del prototipo.
 
-## Ejecutar
+## Recorrido georreferenciado
 
-Desde la raíz del repositorio, con Python 3.10 o posterior:
+Desde la carpeta que contiene este README y con Python 3.10 o posterior:
+
+```powershell
+python -m pip install -e .
+python -m geopredict recorrido --semilla 42 --salida ../entrega_geopredict
+python -m unittest discover -s tests -v
+```
+
+`recorrido` acepta `--config`, `--ruta` y `--sin-grafico`. La geometría incluida permite regenerar sin conexión. La [metodología](METODOLOGIA.md) documenta el modelo, sus fuentes, los archivos y sus límites.
+
+## Escenas de control
+
+Desde esta misma carpeta:
 
 ```powershell
 python -m pip install -e .

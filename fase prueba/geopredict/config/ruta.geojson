@@ -1,0 +1,67 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        -75.57472007559893,
+        6.2575654218651175
+      ],
+      [
+        -75.5743542,
+        6.2581581
+      ],
+      [
+        -75.5737761,
+        6.2591018
+      ],
+      [
+        -75.573607,
+        6.2593782
+      ],
+      [
+        -75.5735404,
+        6.2594963
+      ],
+      [
+        -75.5734253,
+        6.2597264
+      ],
+      [
+        -75.5732457,
+        6.2601405
+      ],
+      [
+        -75.57322480075747,
+        6.260189156859295
+      ]
+    ]
+  },
+  "properties": {
+    "nombre": "Avenida Regional, acceso calle 55–proyección puente Horacio Toro",
+    "sentido": "sur a norte",
+    "crs": "EPSG:4326",
+    "fuente": "© OpenStreetMap contributors",
+    "licencia": "https://www.openstreetmap.org/copyright",
+    "consulta": "https://api.openstreetmap.org/api/0.6/map?bbox=-75.582,6.253,-75.572,6.266",
+    "fecha_consulta": "2026-11-26",
+    "estado": "computed",
+    "vias": {
+      "1475082322": 3,
+      "674586588": 7,
+      "1020054674": 5,
+      "674586587": 7,
+      "1475165819": 1,
+      "1020054670": 4
+    },
+    "referencia_sur": [
+      -75.5745963,
+      6.2574889
+    ],
+    "distancia_transversal_sur_m": 16.10112007673203,
+    "referencia_norte": "Intersección planimétrica con el eje OSM 1020054670, sin giro",
+    "segmentos_tablero": [
+      4
+    ]
+  }
+}

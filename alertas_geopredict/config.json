@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "segmento_m": 5.0,
+  "ventana_m": 2.0,
+  "cobertura_minima": 0.75,
+  "referencia_hasta_m": 45.0,
+  "resguardo_m": 5.0,
+  "min_referencia": 300,
+  "cuantil_moderado": 0.95,
+  "cuantil_alto": 0.99,
+  "persistencia_minima": 0.2,
+  "max_alertas_por_recorrido": 4,
+  "indicadores": ["rms_middle_au", "rms_late_au", "peak_abs_au"],
+  "limite_extremo_iqr": 3.0
+}
